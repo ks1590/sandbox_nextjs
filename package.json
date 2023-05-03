@@ -14,7 +14,7 @@
     "@vercel/examples-ui": "^1.0.5",
     "clsx": "^1.2.1",
     "eventsource-parser": "^0.1.0",
-    "next": "latest",
+    "next": "13.0.3",
     "react": "latest",
     "react-cookie": "^4.1.1",
     "react-dom": "latest",
