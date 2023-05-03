@@ -14,7 +14,7 @@ export const initialMessages: ChatGPTMessage[] = [
 ]
 
 const InputMessage = ({ input, setInput, sendMessage }: any) => (
-  <div className="mt-6 flex clear-both">
+  <div className="mt-3 flex clear-both">
     <input
       type="text"
       aria-label="chat input"
@@ -33,7 +33,7 @@ const InputMessage = ({ input, setInput, sendMessage }: any) => (
     />
     <Button
       type="submit"
-      className="ml-4 flex-none"
+      className="flex-none"
       onClick={() => {
         sendMessage(input)
         setInput('')
@@ -114,23 +114,28 @@ export function Chat() {
   }
 
   return (
-    <div className="rounded-2xl border-zinc-100  lg:border lg:p-6">
-      {messages.map(({ content, role }, index) => (
-        <ChatLine key={index} role={role} content={content} />
-      ))}
+		<div className='chat-container'>
+			<h1 className='app-title'>Supportsonic</h1>
+			{messages.map(({ content, role }, index) => (
+				<ChatLine key={index} role={role} content={content} />
+			))}
 
-      {loading && <LoadingChatLine />}
+			{loading && <LoadingChatLine />}
 
-      {messages.length < 2 && (
-        <span className="mx-auto flex flex-grow text-gray-600 clear-both">
-          Type a message to start the conversation
-        </span>
-      )}
-      <InputMessage
-        input={input}
-        setInput={setInput}
-        sendMessage={sendMessage}
-      />
-    </div>
-  )
+			<div className='input-container'>
+				<div className='input-section'>
+					{messages.length < 2 && (
+						<span className='mx-auto flex flex-grow font-extrabold text-l text-white clear-both'>
+							質問したい内容をここに入力してください。
+						</span>
+					)}
+					<InputMessage
+						input={input}
+						setInput={setInput}
+						sendMessage={sendMessage}
+					/>
+				</div>
+			</div>
+		</div>
+	);
 }

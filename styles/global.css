@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main, section, .main-container {
+  @apply w-full h-full ;
+}
+
+#__next {
+  @apply h-screen bg-gray-50	;
+}
+
+.app-title {
+	@apply pb-8 font-extrabold text-6xl text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-pink-500;
+}
+
+.chat-container {
+	@apply relative w-full h-full rounded-2xl border-zinc-100  lg:border lg:p-6 bg-white shadow-2xl;
+}
+
+.input-container {
+  @apply absolute flex bottom-0 left-0 w-full ;
+}
+
+.input-section {
+  @apply w-full m-5  p-5 rounded-2xl bg-gradient-to-br from-blue-800 to-indigo-900;
+}
