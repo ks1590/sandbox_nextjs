@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app';
 import { Analytics } from '@vercel/analytics/react';
 import type { LayoutProps } from '@vercel/examples-ui/layout';
 import '../styles/global.css';
-import Layout from '../components/layout';
+// import Layout from '../components/layout';
 
 // import { Layout, getLayout } from '@vercel/examples-ui';
 
