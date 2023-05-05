@@ -6,9 +6,6 @@ if (!process.env.OPENAI_API_KEY) {
   throw new Error('Missing Environment Variable OPENAI_API_KEY')
 }
 
-export const config = {
-  runtime: 'edge',
-}
 
 const handler = async (req: Request): Promise<Response> => {
   const body = await req.json()
