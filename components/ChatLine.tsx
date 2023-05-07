@@ -1,7 +1,10 @@
 import clsx from 'clsx';
 import Balancer from 'react-wrap-balancer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRobot } from '@fortawesome/free-solid-svg-icons';
+import {
+	faCircleUser,
+	faWandSparkles,
+} from '@fortawesome/free-solid-svg-icons';
 
 // wrap Balancer to remove type errors :( - @TODO - fix this ugly hack
 const BalancerWrapper = (props: any) => <Balancer {...props} />;
@@ -53,11 +56,12 @@ export function ChatLine({ role = 'assistant', content }: ChatGPTMessage) {
 	return (
 		<div className={role != 'assistant' ? 'chat chat-end' : 'chat chat-start'}>
 			<BalancerWrapper>
-				<div className='chat chat-start'>
+				<div
+					className={role != 'assistant' ? 'chat chat-end' : 'chat chat-start'}>
 					<div className='chat-image avatar'>
 						<div className='w-17 rounded-full'>
 							<FontAwesomeIcon
-								icon={faRobot}
+								icon={role != 'assistant' ? faCircleUser : faWandSparkles}
 								style={{
 									fontSize: 'xx-large',
 									color: 'gray',
@@ -73,7 +77,7 @@ export function ChatLine({ role = 'assistant', content }: ChatGPTMessage) {
 								? 'chat-bubble chat-bubble-primary'
 								: 'chat-bubble'
 						}>
-						<p className='font-large text-xxl text-gray-900'>
+						<p className='font-large text-xxl text-white'>
 							<a href='#' className='hover:underline'>
 								{role == 'assistant' ? 'AI' : 'You'}
 							</a>

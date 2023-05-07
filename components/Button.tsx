@@ -1,4 +1,6 @@
 import clsx from 'clsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 export function Button({ className, ...props }: any) {
 	return (
@@ -10,20 +12,15 @@ export function Button({ className, ...props }: any) {
 		//   )}
 		//   {...props}
 		// />
-		<button className='btn btn-circle' {...props}>
-			<svg
-				xmlns='http://www.w3.org/2000/svg'
-				className='h-6 w-6'
-				fill='none'
-				viewBox='0 0 24 24'
-				stroke='currentColor'>
-				<path
-					strokeLinecap='round'
-					strokeLinejoin='round'
-					strokeWidth='2'
-					d='M6 18L18 6M6 6l12 12'
-				/>
-			</svg>
+		<button className='btn rounded-md' {...props}>
+			<FontAwesomeIcon
+				icon={faPaperPlane}
+				style={{
+					fontSize: 'x-large',
+					color: 'white',
+					padding: '8px 16px',
+				}}
+			/>
 		</button>
 	);
 }

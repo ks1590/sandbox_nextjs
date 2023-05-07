@@ -2,16 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-main {
-  @apply max-w-5xl w-screen h-full !important;
-}
-
-section, .main-container {
-  @apply w-full h-full ;
+main,
+section,
+.main-container {
+	@apply w-full h-full;
 }
 
 #__next {
-  @apply h-screen bg-gray-50	;
+	@apply h-screen bg-gray-100;
 }
 
 .app-title {
@@ -19,13 +17,13 @@ section, .main-container {
 }
 
 .chat-container {
-	@apply relative w-full h-full rounded-2xl border-zinc-100  lg:border lg:p-6 bg-white shadow-2xl;
+	@apply relative w-full h-full overflow-auto	rounded-2xl border-zinc-100  lg:border lg:p-6 bg-white shadow-2xl;
 }
 
 .input-container {
-  @apply absolute flex bottom-0 left-0 w-full ;
+	@apply absolute flex bottom-3 left-0 w-full;
 }
 
 .input-section {
-  @apply w-full m-5  p-5 rounded-2xl bg-gradient-to-br from-blue-800 to-indigo-900;
+	@apply w-full m-5;
 }
